@@ -6,6 +6,12 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * A weighted directed graph data structure to hold the input data and store in graph format.
+ * @author Rushikesh Teli
+ *
+ * @param <V>
+ */
 public class DirectedGraph<V> {
 
 	/**

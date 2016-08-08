@@ -9,6 +9,12 @@ import java.util.Set;
 import domain.DirectedGraph;
 import service.GraphService;
 
+/**
+ * This is a main class, which calls services to get required information. 
+ * 
+ * @author Rushikesh Teli.
+ *
+ */
 public class TrainInfo {
 
     public static void main (String[] args) {
@@ -28,6 +34,13 @@ public class TrainInfo {
         System.out.println("Output #9: " + graphService.findTripsWithMaxWeight(graph, "C", "C", 30));
     }
     
+    /**
+     * This method parses and validates command line input and exits if input is invalid else
+     * populates the graph and return it.
+     * 
+     * @param args
+     * @return
+     */
     public static DirectedGraph<String> populateGraphfromInput(String[] args){
     	DirectedGraph<String> graph = new DirectedGraph<String>();
     	final String PATHSEPARATOR = ",";
