@@ -62,6 +62,7 @@ public class TrainInfo {
     	int weight;
     	for(String path : paths){
     		if(!uniquePaths.contains(path) && path.length() ==3){
+    			uniquePaths.add(path);
     			source = path.substring(0, 1);
     			destination = path.substring(1, 2);
     			try{
@@ -76,7 +77,7 @@ public class TrainInfo {
     			}
     			graph.add(source, destination, weight);
     		}else{
-    			System.out.println("Invalid Input :: " + path);
+    			System.out.println("Invalid Input, Duplicate if format is valid :: " + path);
     			graph = new DirectedGraph<String>();
     		}
     	}
