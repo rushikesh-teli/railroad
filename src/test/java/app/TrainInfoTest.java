@@ -32,4 +32,12 @@ public class TrainInfoTest extends TestCase{
     	assertNotNull(graph);
     	assertEquals(0, graph.getNeighbors().size());
     }
+    
+    @Test
+    public void testPopulateGraphfromInputDuplicatePath(){
+    	String[] args = {"AE7", "AE7"};
+    	DirectedGraph<String> graph = TrainInfo.populateGraphfromInput(args);
+    	assertNotNull(graph);
+    	assertEquals(0, graph.getNeighbors().size());
+    }
 }
